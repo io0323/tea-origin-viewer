@@ -1,0 +1,105 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Tea Origin Viewer" %>
+
+<%= render "map", tea_origins: @tea_origins %>
+
+<div class="tea-form-card">
+  <div class="tea-form-toggle" onclick="toggleForm()">
+    <div class="tea-form-title">
+      <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+      新規茶葉登録
+    </div>
+    <div class="tea-form-toggle-icon" id="toggle-icon">▼</div>
+  </div>
+  <div class="tea-form-content" id="form-content" style="display: none;">
+    <%= render "form", tea_origin: @tea_origin %>
+  </div>
+</div>
+
+<div class="tea-form-card">
+  <div class="tea-list-title">
+    <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+    登録済みロット一覧
+  </div>
+  <div class="tea-lot-list" id="tea-origins-list">
+    <% @tea_origins.each do |tea_origin| %>
+      <div class="tea-lot-item">
+        <div class="tea-lot-header">
+          <div class="tea-lot-header-cell">
+            <span class="tea-lot-header-title">原料名</span>
+            <span class="tea-lot-name"><%= tea_origin.name %></span>
+          </div>
+          <div class="tea-lot-header-cell">
+            <span class="tea-lot-header-title">調達元（農園名）</span>
+            <span class="tea-lot-location"><%= tea_origin.location_name %></span>
+          </div>
+        </div>
+        <div class="tea-lot-details">
+          <div class="tea-lot-detail">
+            <span class="tea-lot-label">ロットID:</span>
+            <span class="tea-lot-value"><%= tea_origin.lot_id %></span>
+          </div>
+          <div class="tea-lot-detail">
+            <span class="tea-lot-label">緯度:</span>
+            <span class="tea-lot-value"><%= tea_origin.latitude %></span>
+          </div>
+          <div class="tea-lot-detail">
+            <span class="tea-lot-label">経度:</span>
+            <span class="tea-lot-value"><%= tea_origin.longitude %></span>
+          </div>
+          <div class="tea-lot-detail">
+            <span class="tea-lot-label">収穫日:</span>
+            <span class="tea-lot-value"><%= tea_origin.harvested_on.strftime("%Y年%m月%d日") if tea_origin.harvested_on %></span>
+          </div>
+          <div class="tea-lot-detail">
+            <span class="tea-lot-label">登録日:</span>
+            <span class="tea-lot-value"><%= tea_origin.created_at.strftime("%Y年%m月%d日") %></span>
+          </div>
+          <div class="tea-lot-detail">
+            <span class="tea-lot-label">備考:</span>
+            <span class="tea-lot-value"><%= tea_origin.notes.presence || "なし" %></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="mt-2 flex justify-center">
+    <%= paginate @tea_origins %>
+  </div>
+</div>
+
+<div id="toast-container"></div>
+
+<script>
+function toggleForm() {
+  const formContent = document.getElementById('form-content');
+  const toggleIcon = document.getElementById('toggle-icon');
+  
+  if (formContent.style.display === 'none') {
+    formContent.style.display = 'block';
+    toggleIcon.textContent = '▲';
+  } else {
+    formContent.style.display = 'none';
+    toggleIcon.textContent = '▼';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // トースト通知を自動的に非表示にする
+  const toastContainer = document.getElementById('toast-container');
+  if (toastContainer) {
+    const toasts = toastContainer.querySelectorAll('.toast-notification');
+    toasts.forEach(toast => {
+      setTimeout(() => {
+        toast.classList.add('hiding');
+        setTimeout(() => {
+          if (toast.parentNode) {
+            toast.parentNode.removeChild(toast);
+          }
+        }, 300);
+      }, 3000);
+    });
+  }
+});
+</script>

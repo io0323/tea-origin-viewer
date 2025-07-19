@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tea_origin %>
+
+<div>
+  <%= link_to "Edit this tea origin", edit_tea_origin_path(@tea_origin) %> |
+  <%= link_to "Back to tea origins", tea_origins_path %>
+
+  <%= button_to "Destroy this tea origin", @tea_origin, method: :delete %>
+</div>

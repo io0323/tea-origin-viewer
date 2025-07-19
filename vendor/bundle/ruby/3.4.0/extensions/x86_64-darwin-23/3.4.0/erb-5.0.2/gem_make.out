@@ -1,0 +1,21 @@
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+/usr/local/opt/ruby/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-s5saj8 sitelibdir\=./.gem.20250719-130-s5saj8 clean
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-s5saj8 sitelibdir\=./.gem.20250719-130-s5saj8
+compiling escape.c
+linking shared-object erb/escape.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-s5saj8 sitelibdir\=./.gem.20250719-130-s5saj8 install
+/usr/bin/install -c -m 0755 escape.bundle ./.gem.20250719-130-s5saj8/erb
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-s5saj8 sitelibdir\=./.gem.20250719-130-s5saj8 clean

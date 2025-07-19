@@ -1,0 +1,34 @@
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+/usr/local/opt/ruby/bin/ruby extconf.rb
+checking for pkg-config for yaml-0.1... ["-I/usr/local/Cellar/libyaml/0.2.5/include ", "-L/usr/local/Cellar/libyaml/0.2.5/lib", "-lyaml"]
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-nlect7 sitelibdir\=./.gem.20250719-130-nlect7 clean
+cd libyaml && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-nlect7 sitelibdir\=./.gem.20250719-130-nlect7
+compiling psych.c
+compiling psych_emitter.c
+compiling psych_parser.c
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+linking shared-object psych.bundle
+ld: warning: ignoring duplicate libraries: '-lyaml'
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-nlect7 sitelibdir\=./.gem.20250719-130-nlect7 install
+/usr/bin/install -c -m 0755 psych.bundle ./.gem.20250719-130-nlect7
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/psych-5.2.6/ext/psych
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-nlect7 sitelibdir\=./.gem.20250719-130-nlect7 clean
+cd libyaml && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean
+/bin/sh: line 0: cd: libyaml: No such file or directory
+make: [clean-so] Error 1 (ignored)

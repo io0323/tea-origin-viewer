@@ -1,0 +1,9 @@
+<%= turbo_stream.replace "form_tea_origin", partial: "form", locals: { tea_origin: @tea_origin } %>
+<%= turbo_stream.replace "tea-map", partial: "map", locals: { tea_origins: TeaOrigin.all.order(harvested_on: :desc) } %>
+<%= turbo_stream.append "tea-origins-list", partial: "tea_origin", locals: { tea_origin: @tea_origin } %>
+<%= turbo_stream.update "toast-container" do %>
+  <div class="toast-notification success">
+    <div class="toast-icon">✓</div>
+    <div class="toast-message">登録しました</div>
+  </div>
+<% end %> 

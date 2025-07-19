@@ -1,0 +1,38 @@
+<div class="tea-lot-item">
+  <div class="tea-lot-header">
+    <div class="tea-lot-header-cell">
+      <span class="tea-lot-header-title">原料名</span>
+      <span class="tea-lot-name"><%= tea_origin.name %></span>
+    </div>
+    <div class="tea-lot-header-cell">
+      <span class="tea-lot-header-title">調達元（農園名）</span>
+      <span class="tea-lot-location"><%= tea_origin.location_name %></span>
+    </div>
+  </div>
+  <div class="tea-lot-details">
+    <div class="tea-lot-detail">
+      <span class="tea-lot-label">ロットID:</span>
+      <span class="tea-lot-value"><%= tea_origin.lot_id %></span>
+    </div>
+    <div class="tea-lot-detail">
+      <span class="tea-lot-label">緯度:</span>
+      <span class="tea-lot-value"><%= tea_origin.latitude %></span>
+    </div>
+    <div class="tea-lot-detail">
+      <span class="tea-lot-label">経度:</span>
+      <span class="tea-lot-value"><%= tea_origin.longitude %></span>
+    </div>
+    <div class="tea-lot-detail">
+      <span class="tea-lot-label">収穫日:</span>
+      <span class="tea-lot-value"><%= tea_origin.harvested_on.strftime("%Y年%m月%d日") if tea_origin.harvested_on %></span>
+    </div>
+    <div class="tea-lot-detail">
+      <span class="tea-lot-label">登録日:</span>
+      <span class="tea-lot-value"><%= tea_origin.created_at.strftime("%Y年%m月%d日") %></span>
+    </div>
+    <div class="tea-lot-detail">
+      <span class="tea-lot-label">備考:</span>
+      <span class="tea-lot-value"><%= tea_origin.notes.presence || "なし" %></span>
+    </div>
+  </div>
+</div>

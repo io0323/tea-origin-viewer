@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  location_name: MyString
+  latitude: 1.5
+  longitude: 1.5
+  lot_id: MyString
+  harvested_on: 2025-07-17
+  notes: MyText
+
+two:
+  name: MyString
+  location_name: MyString
+  latitude: 1.5
+  longitude: 1.5
+  lot_id: MyString
+  harvested_on: 2025-07-17
+  notes: MyText

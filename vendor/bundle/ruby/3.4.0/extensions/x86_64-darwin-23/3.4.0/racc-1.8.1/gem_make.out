@@ -1,0 +1,20 @@
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/local/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-mp9zkv sitelibdir\=./.gem.20250719-130-mp9zkv clean
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-mp9zkv sitelibdir\=./.gem.20250719-130-mp9zkv
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-mp9zkv sitelibdir\=./.gem.20250719-130-mp9zkv install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250719-130-mp9zkv/racc
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-mp9zkv sitelibdir\=./.gem.20250719-130-mp9zkv clean

@@ -1,0 +1,21 @@
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+/usr/local/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-7qnjgn sitelibdir\=./.gem.20250719-130-7qnjgn clean
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-7qnjgn sitelibdir\=./.gem.20250719-130-7qnjgn
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-7qnjgn sitelibdir\=./.gem.20250719-130-7qnjgn install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20250719-130-7qnjgn/debug
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-7qnjgn sitelibdir\=./.gem.20250719-130-7qnjgn clean

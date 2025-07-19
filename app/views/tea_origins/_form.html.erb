@@ -1,0 +1,65 @@
+<%= form_with(model: tea_origin, data: { turbo_frame: "form_tea_origin" }) do |form| %>
+  <% if tea_origin.errors.any? %>
+    <div class="tea-form-error">
+      <ul>
+        <% tea_origin.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="tea-form-fields">
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" /></svg>
+        原料名
+      </label>
+      <%= form.text_field :name, class: "tea-form-input" %>
+    </div>
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 8.25V6.75A2.25 2.25 0 0014.25 4.5h-4.5A2.25 2.25 0 007.5 6.75v1.5" /></svg>
+        調達元（農園名）
+      </label>
+      <%= form.text_field :location_name, class: "tea-form-input" %>
+    </div>
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" /></svg>
+        緯度
+      </label>
+      <%= form.number_field :latitude, step: :any, class: "tea-form-input", value: 34.75 %>
+    </div>
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2" /></svg>
+        経度
+      </label>
+      <%= form.number_field :longitude, step: :any, class: "tea-form-input", value: 138.25 %>
+    </div>
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2a4 4 0 018 0v2" /></svg>
+        ロットID
+      </label>
+      <%= form.text_field :lot_id, class: "tea-form-input" %>
+    </div>
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        調達日
+      </label>
+      <%= form.date_field :harvested_on, class: "tea-form-input" %>
+    </div>
+    <div class="tea-form-group">
+      <label class="tea-form-label">
+        <svg xmlns="http://www.w3.org/2000/svg" class="tea-map-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+        品質メモ
+      </label>
+      <%= form.text_area :notes, class: "tea-form-textarea", rows: 3 %>
+    </div>
+    <div>
+      <%= form.submit "登録", class: "tea-form-submit" %>
+    </div>
+  </div>
+<% end %>

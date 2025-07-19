@@ -1,0 +1,20 @@
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+/usr/local/opt/ruby/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-74tfrg sitelibdir\=./.gem.20250719-130-74tfrg clean
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-74tfrg sitelibdir\=./.gem.20250719-130-74tfrg
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-74tfrg sitelibdir\=./.gem.20250719-130-74tfrg install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20250719-130-74tfrg
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/websocket-driver-0.8.0/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-74tfrg sitelibdir\=./.gem.20250719-130-74tfrg clean

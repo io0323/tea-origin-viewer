@@ -1,0 +1,52 @@
+<%# The container tag
+  - available local variables
+    current_page:  a page object for the currently displayed page
+    total_pages:   total number of pages
+    per_page:      number of items to fetch per page
+    remote:        data-remote
+    paginator:     the paginator that renders the pagination tags inside
+-%>
+<nav class="kaminari" aria-label="ページネーション">
+  <ul class="pagination">
+    <% safe_params = params.respond_to?(:to_unsafe_h) ? params.to_unsafe_h : params.to_h %>
+    <% page_numbers = [] %>
+    <% paginator.each_page { |page| page_numbers << page if page } %>
+    <% last_page = page_numbers.max || 1 %>
+    <%# 最初へ %>
+    <% if current_page == 1 %>
+      <li class="first disabled"><span>&laquo; 最初へ</span></li>
+    <% else %>
+      <li class="first"><%= link_to raw('&laquo; 最初へ'), url_for(safe_params.merge(page: 1)), rel: 'first' %></li>
+    <% end %>
+
+    <%# 前へ %>
+    <% if current_page > 1 %>
+      <li class="prev"><%= link_to raw('&lsaquo; 前へ'), url_for(safe_params.merge(page: current_page - 1)), rel: 'prev' %></li>
+    <% else %>
+      <li class="prev disabled"><span>&lsaquo; 前へ</span></li>
+    <% end %>
+
+    <%# ページ番号 %>
+    <% page_numbers.each do |page| %>
+      <% if page == current_page %>
+        <li class="active"><span><%= page %></span></li>
+      <% else %>
+        <li class="page"><%= link_to page, url_for(safe_params.merge(page: page)) %></li>
+      <% end %>
+    <% end %>
+
+    <%# 次へ %>
+    <% if current_page < last_page %>
+      <li class="next"><%= link_to raw('次へ &rsaquo;'), url_for(safe_params.merge(page: current_page + 1)), rel: 'next' %></li>
+    <% else %>
+      <li class="next disabled"><span>次へ &rsaquo;</span></li>
+    <% end %>
+
+    <%# 最後へ %>
+    <% if current_page == last_page %>
+      <li class="last disabled"><span>最後へ &raquo;</span></li>
+    <% else %>
+      <li class="last"><%= link_to raw('最後へ &raquo;'), url_for(safe_params.merge(page: last_page)), rel: 'last' %></li>
+    <% end %>
+  </ul>
+</nav>

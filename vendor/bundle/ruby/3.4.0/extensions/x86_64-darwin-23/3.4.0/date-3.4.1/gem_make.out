@@ -1,0 +1,26 @@
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/date-3.4.1/ext/date
+/usr/local/opt/ruby/bin/ruby extconf.rb
+checking for rb_category_warn()... yes
+checking for timezone in time.h with -Werror... yes
+checking for altzone in time.h with -Werror... no
+creating Makefile
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-9t6tap sitelibdir\=./.gem.20250719-130-9t6tap clean
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-9t6tap sitelibdir\=./.gem.20250719-130-9t6tap
+compiling date_core.c
+compiling date_parse.c
+compiling date_strftime.c
+compiling date_strptime.c
+linking shared-object date_core.bundle
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+ld: warning: search path '/usr/local/Cellar/openssl@3/3.4.1/lib' not found
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-9t6tap sitelibdir\=./.gem.20250719-130-9t6tap install
+/usr/bin/install -c -m 0755 date_core.bundle ./.gem.20250719-130-9t6tap
+
+current directory: /Users/io/Projects/GitHub/WebProjects/Fullstack/tea-origin-viewer/vendor/bundle/ruby/3.4.0/gems/date-3.4.1/ext/date
+make DESTDIR\= sitearchdir\=./.gem.20250719-130-9t6tap sitelibdir\=./.gem.20250719-130-9t6tap clean
